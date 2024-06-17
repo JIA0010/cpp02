@@ -8,22 +8,24 @@
 class Fixed {
  private:
   int value;
-  const int fractionalBits  = 8;
+  static const int fractionalBits  = 8;
 
  public:
   Fixed();
-  Fixed(Fixed& copy);
+  Fixed(const Fixed& copy);
   Fixed& operator=(const Fixed& other);
   ~Fixed();
 
-  Fixed(const int value);
-  Fixed(const float value);
+  Fixed(int value);
+  Fixed(float value);
 
   float toFloat(void) const;
   int toInt(void) const;
 
   int getRawBits(void) const;
-  void setRawBits(int const raw);
+  void setRawBits(int const raw);  
 };
+
+std::ostream & operator<<( std::ostream & o, Fixed const & rhs);
 
 #endif
