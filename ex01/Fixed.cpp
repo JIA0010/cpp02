@@ -32,7 +32,7 @@ Fixed::~Fixed() {std::cout << "Destructor called" << std::endl;}
 Fixed::Fixed(int value)
 {
     std::cout << "Int constructor called" << std::endl;
-    setRawBits(value << fractionalBits);
+    setRawBits(value << this->fractionalBits);
 }
 
 Fixed::Fixed(float value)
