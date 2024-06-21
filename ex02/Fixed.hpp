@@ -50,6 +50,6 @@ class Fixed {
 	void setRawBits(int const raw);  
 };
 
-std::ostream & operator<<( std::ostream & o, Fixed const & rhs);
+std::ostream & operator<<( std::ostream & out, Fixed const & rightSide);
 
 #endif

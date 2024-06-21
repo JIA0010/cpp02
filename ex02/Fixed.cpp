@@ -76,6 +76,11 @@ bool Fixed::operator>(const Fixed& other) const
     return (this->getRawBits() > other.getRawBits());
 }
 
+bool Fixed::operator<(const Fixed& other) const
+{
+    return (this->getRawBits() < other.getRawBits());
+}
+
 bool  Fixed::operator<=(const Fixed &other) const
 {
     return this->getRawBits() <= other.getRawBits();
@@ -162,6 +167,7 @@ Fixed &Fixed::max(Fixed &fixA, Fixed &fixB)
 {
     return fixA.getRawBits() > fixB.getRawBits() ? fixA : fixB;
 }
+
 const Fixed &Fixed::max(const Fixed &fixA, const Fixed &fixB)
 {
     return fixA.getRawBits() > fixB.getRawBits() ? fixA : fixB;
